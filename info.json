@@ -14,5 +14,10 @@
 
     "frozen-goodies >= 0.0.1"
   ],
-  "spoiling_required": true
+  "spoiling_required": true,
+  "package": {
+    "ignore": [
+      "**/*.xcf"
+    ]
+  }
 }
