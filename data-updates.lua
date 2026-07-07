@@ -1,3 +1,4 @@
+local khaoslib_item = require("__khaoslib__.item")
 local khaoslib_recipe = require("__khaoslib__.recipe")
 
 local frozen_goodies = {
@@ -64,20 +65,18 @@ local frozen_goodies = {
 }
 
 for _, goodie in pairs(frozen_goodies) do
-  data.raw["item"][goodie.name].icon = nil
-  data.raw["item"][goodie.name].icon_size = nil
-  data.raw["item"][goodie.name].icons = {
-    {icon = "__space-age__/graphics/icons/ice.png", icon_size = 64},
-    {icon = goodie.icon, icon_size = 64, scale = goodie.scale, shift = goodie.shift},
-    {icon = "__frozen-goodies-base-assets__/graphics/icons/ice-open.png", icon_size = 64},
-  }
+  khaoslib_item:load(goodie.name)
+    :clear_icons()
+    :add_icon {icon = "__space-age__/graphics/icons/ice.png", icon_size = 64}
+    :add_icon {icon = goodie.icon, icon_size = 64, scale = goodie.scale, shift = goodie.shift}
+    :add_icon {icon = "__frozen-goodies-base-assets__/graphics/icons/ice-open.png", icon_size = 64}
+    :commit()
 
-  data.raw["recipe"][goodie.name .. "-melt"].icon = nil
-  data.raw["recipe"][goodie.name .. "-melt"].icon_size = nil
-  data.raw["recipe"][goodie.name .. "-melt"].icons = {
-    {icon = "__space-age__/graphics/icons/ice.png", icon_size = 64},
-    {icon = goodie.icon, icon_size = 64, scale = goodie.scale, shift = goodie.shift},
-    {icon = "__frozen-goodies-base-assets__/graphics/icons/ice-open.png", icon_size = 64},
-    {icon = "__frozen-goodies-base-assets__/graphics/icons/fire.png", icon_size = 64, scale = 0.3, shift = {-10, -10}},
-  }
+  khaoslib_recipe:load(goodie.name .. "-melt")
+    :clear_icons()
+    :add_icon {icon = "__space-age__/graphics/icons/ice.png", icon_size = 64}
+    :add_icon {icon = goodie.icon, icon_size = 64, scale = goodie.scale, shift = goodie.shift}
+    :add_icon {icon = "__frozen-goodies-base-assets__/graphics/icons/ice-open.png", icon_size = 64}
+    :add_icon {icon = "__frozen-goodies-base-assets__/graphics/icons/fire.png", icon_size = 64, scale = 0.3, shift = {-10, -10}}
+    :commit()
 end

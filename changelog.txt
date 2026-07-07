@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2026-07-07
+  Changes:
+    - Use khaoslib to set icons for frozen goodies and their melt recipes instead of manually setting them.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2026-07-07
   Features:
