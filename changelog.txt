@@ -1,3 +1,5 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
-Date: ????
+Date: 2026-07-07
+  Features:
+    - Create base assets for procedually generated frozen goodies icons.
