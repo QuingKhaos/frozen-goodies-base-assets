@@ -1,18 +1,16 @@
 {
   "name": "frozen-goodies-base-assets",
   "title": "Frozen Goodies Base Assets",
-  "description": "Base assets to dynamically create frozen goodies with layers.",
+  "description": "[DEPRECATED] Functionality migrated to Frozen Goodies Library.",
   "author": "QuingKhaos",
   "homepage": "https://discord.gg/SYmkaDjFCt",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0.77",
     "space-age >= 2.0.77",
 
-    "khaoslib >= 1.4.0",
-
-    "frozen-goodies >= 0.0.1"
+    "frozen-goodies-lib >= 1.0.0"
   ],
   "spoiling_required": true,
   "package": {
